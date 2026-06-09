@@ -10,18 +10,35 @@ while True:
 
     if op == "1":
         nome = input("Nome do time: ")
-        times.append(nome)
+
+        time = {
+            "nome": nome,
+            "pontos": 0,
+            "vitorias": 0,
+            "empates": 0,
+            "derrotas": 0
+        }
+
+        times.append(time)
+
         print("Time cadastrado com sucesso!")
 
     elif op == "2":
+
         print("\n=== TIMES CADASTRADOS ===")
 
         if len(times) == 0:
             print("Nenhum time cadastrado.")
 
         else:
-            for i, time in enumerate(times, start=1):
-                print(f"{i} - {time}")
+            for t in times:
+                print(
+                    f"{t['nome']} | "
+                    f"{t['pontos']} pts | "
+                    f"V:{t['vitorias']} "
+                    f"E:{t['empates']} "
+                    f"D:{t['derrotas']}"
+                )
 
     elif op == "3":
         print("Sistema encerrado.")
