@@ -14,7 +14,14 @@ while True:
         print("Time cadastrado com sucesso!")
 
     elif op == "2":
-        print("Funcionalidade em desenvolvimento")
+        print("\n=== TIMES CADASTRADOS ===")
+
+        if len(times) == 0:
+            print("Nenhum time cadastrado.")
+
+        else:
+            for i, time in enumerate(times, start=1):
+                print(f"{i} - {time}")
 
     elif op == "3":
         print("Sistema encerrado.")
