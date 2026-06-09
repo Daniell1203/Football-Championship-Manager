@@ -9,7 +9,9 @@ while True:
     op = input("Escolha uma opção: ")
 
     if op == "1":
-        print("Funcionalidade em desenvolvimento")
+        nome = input("Nome do time: ")
+        times.append(nome)
+        print("Time cadastrado com sucesso!")
 
     elif op == "2":
         print("Funcionalidade em desenvolvimento")
